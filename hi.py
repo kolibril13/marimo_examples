@@ -1,6 +1,15 @@
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#     "marimo",
+#     "matplotlib==3.9.2",
+#     "numpy==2.1.2",
+# ]
+# ///
+
 import marimo
 
-__generated_with = "0.9.3"
+__generated_with = "0.9.9"
 app = marimo.App(width="medium")
 
 
@@ -28,13 +37,12 @@ def __():
     _ax.set(xlim=(0, 8), xticks=np.arange(1, 8),
            ylim=(0, 8), yticks=np.arange(1, 8))
 
-    plt.show()
+    plt.gca()
     return np, plt
 
 
 @app.cell
 def __(np, plt):
-
     plt.style.use('_mpl-gallery')
 
     # make the data
@@ -55,6 +63,26 @@ def __(np, plt):
 
     plt.show()
     return ax, colors, fig, sizes, x, y
+
+
+@app.cell
+def __():
+    return
+
+
+@app.cell
+def __():
+    return
+
+
+@app.cell(disabled=True)
+def __():
+    import time
+
+    print("This cell will take 10 seconds to run...")
+    time.sleep(10)
+    print("Done!")
+    return (time,)
 
 
 @app.cell
