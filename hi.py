@@ -10,6 +10,9 @@
 # ]
 # ///
 
+
+# based on https://github.com/marimo-team/marimo/blob/f2c288b7dfd3d07cf4b7dd298d1ef0166eea6f4b/examples/frameworks/fastapi-github/main.py
+
 import tempfile
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
