@@ -84,7 +84,7 @@ def download_github_files(repo: str, path: str = "") -> list[tuple[str, str]]:
 
 tmp_dir = tempfile.TemporaryDirectory()
 
-def setup_apps() -> tuple[marimo.ASGIApp, list[str]]:
+def setup_apps():
     """Download and setup marimo apps from GitHub"""
     files = download_github_files(GITHUB_REPO, ROOT_DIR)
     server = marimo.create_asgi_app()
