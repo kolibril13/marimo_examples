@@ -2,12 +2,13 @@
 # requires-python = ">=3.11"
 # dependencies = [
 #     "matplotlib==3.9.3",
+#     "numpy==2.1.3",
 # ]
 # ///
 
 import marimo
 
-__generated_with = "0.9.31"
+__generated_with = "0.9.32"
 app = marimo.App(width="medium")
 
 
@@ -30,6 +31,16 @@ def __():
 
     plt.show()
     return X, Y, Z, ax, fig, levels, np, plt
+
+
+@app.cell
+def __():
+    return
+
+
+@app.cell
+def __():
+    return
 
 
 @app.cell
